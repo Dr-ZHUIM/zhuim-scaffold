@@ -4,13 +4,13 @@
     "url": "https://github.com/Dr-ZHUIM"
   },
   "main": "./electron/main.js",
-  "proload": "./electron/proload.js",
+  "proload": "./electron/preload.js",
   "name": "electron_model",
   "private": true,
   "version": "1.0.0",
   "homepage": ".",
   "scripts": {
-    "dev": "vite",
+    "start": "concurrently \"vite\" \"electron . dev\"",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "style": "stylelint \"src/**/*.(scss|css)\" --fix"
